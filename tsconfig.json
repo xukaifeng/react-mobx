@@ -48,15 +48,10 @@
       /*路径映射的集合*/
       "@public/*": ["public/*"],
       "@src/*": ["src/*"],
-      "@assets/*": ["src/assets/*"],
+      "@global/*": ["src/global/*"],
       "@styles/*": ["src/assets/styles/*"],
       "@common/*": ["src/common/*"],
       "@components/*": ["src/components/*"],
-      "@library/*": ["src/library/*"],
-      "@routes/*": ["src/routes/*"],
-      "@store/*": ["src/store/*"],
-      "@server/*": ["src/server/*"],
-      "@api/*": ["src/server/api/*"],
       "@utils/*": ["src/utils/*"]
     }
   },

@@ -1,36 +1,34 @@
 import React from 'react';
 import { Button } from 'antd';
+import { inject, observer } from '@global/mobx';
 import styles from './index.less';
 
-interface IProps {}
+interface IProps {
+  appState?: any;
+}
 
 interface IState {
   count: number;
 }
-
+@inject('appState')
+@observer
 class Home extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
-    this.state = {
-      count: 0,
-    };
-
-    this.handleClick = this.handleClick.bind(this);
   }
   public render() {
-    const { count } = this.state;
+    const { appState } = this.props;
+    const { count, increase, decrease } = appState;
+    console.log(appState);
     return (
       <div>
-        <Button onClick={this.handleClick}>Click me</Button>
         <div>{count}</div>
-        <div>1231234</div>
+        <Button onClick={() => increase()} style={{ marginRight: 10 }}>
+          increase
+        </Button>
+        <Button onClick={() => decrease()}>decrease</Button>
       </div>
     );
-  }
-
-  public handleClick() {
-    const { count } = this.state;
-    this.setState({ count: count + 1 });
   }
 }
 

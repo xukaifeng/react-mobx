@@ -70,6 +70,8 @@ const devConfig = {
     hot: true,
     overlay: true, // 编译出现错误时，将错误直接显示在页面上
     stats: 'errors-only',
+    inline: true,
+    historyApiFallback: true,
   },
 
   stats: 'none',
