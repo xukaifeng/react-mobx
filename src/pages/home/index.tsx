@@ -29,9 +29,6 @@ class Home extends React.Component<IProps, IState> {
           increase
         </Button>
         <Button onClick={() => decrease()}>decrease</Button>
-        <div>-------------</div>
-        <div>{this.t}</div>
-        <Button onClick={() => this.add()}>t add</Button>
       </div>
     );
   }
